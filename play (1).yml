@@ -1,0 +1,9 @@
+- name: configure roles
+  hosts: all
+  become: true
+  vars:
+    - config_phpmyadmin: "true"
+    - config_repo: "true" 
+    - php_access: all granted
+  roles:
+      - role: my_phpmyadmin
